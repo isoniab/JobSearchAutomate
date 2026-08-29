@@ -1,0 +1,63 @@
+{
+  "personal_info": {
+    "name": "Sonia Pegu",
+    "location": "Bangalore, Karnataka",
+    "phone": "+91 9755514600",
+    "email": "sonia.pegu0@gmail.com",
+    "linkedin": "linkedin.com/in/sonia-pegu-6a274845"
+  },
+  "education": [
+    {
+      "institution": "Indian Institute of Management (IIM), Indore",
+      "degree": "MBA",
+      "duration": "2017 – 2019",
+      "highlights": "Top 2% in Strategy Consulting (batch size 145); Topped in Strategic Thinking & KAM"
+    },
+    {
+      "institution": "Jorhat Engineering College (Govt. College)",
+      "degree": "B.E. Computer Science Engineering",
+      "duration": "2009 – 2013",
+      "highlights": "Computer Science Engineering Graduate"
+    }
+  ],
+  "experience": [
+    {
+      "company": "ICICI Bank Ltd.",
+      "role": "Chief Manager – Commercial Payment Solutions Team",
+      "duration": "Aug 2023 – Present",
+      "location": "Bangalore, India",
+      "bullets": [
+        "Scaled commercial cards portfolio from INR 240 Mn to INR 1,800 Mn (7.5x growth) across 60+ corporate acquisitions and 167 corporate clients.",
+        "Structured and closed high-value INR 200 Mn monthly revenue commercial payment deal with Wipro Limited.",
+        "Accelerated client onboarding lifecycle to 10 days for MNC clients, earning MNC Spotlight Award and promotion to Chief Manager in 1.5 years."
+      ]
+    },
+    {
+      "company": "Aien Label",
+      "role": "Founder & Lead Product Manager",
+      "duration": "Jun 2022 – Aug 2023",
+      "location": "Bangalore, India",
+      "bullets": [
+        "Spearheaded digital partner integrations & commercial alliances with Nykaa Fashion and Ogaan."
+      ]
+    },
+    {
+      "company": "American Express",
+      "role": "Risk Strategy Analyst",
+      "duration": "Feb 2020 – Jun 2022",
+      "location": "Bangalore, India",
+      "bullets": [
+        "Built 15+ predictive risk strategy rules and automated SQL reporting pipelines cutting MIS timeline by 85%."
+      ]
+    },
+    {
+      "company": "HP Inc.",
+      "role": "Management Trainee (Sales & Marketing)",
+      "duration": "May 2019 – Feb 2020",
+      "location": "Mumbai / Pune, India",
+      "bullets": [
+        "#1 India rank in corporate seeding sales across Maharashtra and Goa."
+      ]
+    }
+  ]
+}

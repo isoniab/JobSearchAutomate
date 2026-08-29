@@ -1,0 +1,125 @@
+{
+  "user_name": "Sonia Pegu",
+  "location_preference": [
+    "Bangalore",
+    "Bengaluru",
+    "Bengaluru, Karnataka",
+    "India (Hybrid/Remote)"
+  ],
+  "match_threshold": 50,
+  "role_focus": "Enterprise Sales, Commercial Payment Sales, Strategic Partnerships & Alliances, Big Deal Conversion, Key Account Management (KAM)",
+  "target_roles": [
+    "Enterprise Sales Manager",
+    "Director / Senior Manager - Commercial Payments Sales",
+    "Head of Strategic Partnerships & Alliances",
+    "Chief Manager - Corporate Sales & Relationships",
+    "Business Development Lead - Commercial Cards",
+    "Key Account Manager (KAM) - Enterprise Accounts",
+    "Regional Sales Leader / Strategic Account Executive"
+  ],
+  "target_companies": [
+    {
+      "name": "Mastercard",
+      "domain": "mastercard.com",
+      "board": "workday",
+      "token": "mastercard"
+    },
+    {
+      "name": "Visa",
+      "domain": "visa.com",
+      "board": "workday",
+      "token": "visa"
+    },
+    {
+      "name": "American Express",
+      "domain": "americanexpress.com",
+      "board": "custom",
+      "token": "amex"
+    },
+    {
+      "name": "Stripe",
+      "domain": "stripe.com",
+      "board": "greenhouse",
+      "token": "stripe"
+    },
+    {
+      "name": "Razorpay",
+      "domain": "razorpay.com",
+      "board": "lever",
+      "token": "razorpay"
+    },
+    {
+      "name": "PhonePe",
+      "domain": "phonepe.com",
+      "board": "custom",
+      "token": "phonepe"
+    },
+    {
+      "name": "Pine Labs",
+      "domain": "pinelabs.com",
+      "board": "custom",
+      "token": "pinelabs"
+    },
+    {
+      "name": "HP Inc",
+      "domain": "hp.com",
+      "board": "custom",
+      "token": "hp"
+    },
+    {
+      "name": "JPMorgan Chase",
+      "domain": "jpmorganchase.com",
+      "board": "custom",
+      "token": "jpmc"
+    },
+    {
+      "name": "Adyen",
+      "domain": "adyen.com",
+      "board": "greenhouse",
+      "token": "adyen"
+    },
+    {
+      "name": "Nykaa",
+      "domain": "nykaa.com",
+      "board": "custom",
+      "token": "nykaa"
+    },
+    {
+      "name": "Google",
+      "domain": "google.com",
+      "board": "custom",
+      "token": "google"
+    },
+    {
+      "name": "Jio Star",
+      "domain": "jiostar.com",
+      "board": "custom",
+      "token": "jiostar"
+    },
+    {
+      "name": "Swiggy",
+      "domain": "https://careers.swiggy.com",
+      "board": "custom",
+      "token": "swiggy"
+    },
+    {
+      "name": "Airtel",
+      "domain": "https://careers.airtel.com",
+      "board": "custom",
+      "token": "airtel"
+    },
+    {
+      "name": "EY GCC",
+      "domain": "https://careers.ey.com",
+      "board": "custom",
+      "token": "eygcc"
+    },
+    {
+      "name": "Meta",
+      "domain": "https://www.metacareers.com",
+      "board": "custom",
+      "token": "meta"
+    }
+  ],
+  "daily_run_time": "08:00"
+}

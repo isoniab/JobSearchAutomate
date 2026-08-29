@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia Pegu - Enterprise Sales & Strategic Partnerships Job Monitor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 50%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .user-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: white;
+            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .header-text p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #34d399;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .jobs-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .job-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .company-tag {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .req-chip {
+            background: rgba(139, 92, 246, 0.2);
+            color: #c084fc;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .date-chip {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .match-badge {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+            color: #34d399;
+            padding: 0.4rem 0.8rem;
+            border-radius: 10px;
+            border: 1px solid rgba(52, 211, 153, 0.4);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .job-summary-box {
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 3px solid var(--accent-purple);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        /* Refined Alumni & Hiring Network Card */
+        .alumni-box {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .alumni-title {
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .alumni-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .alumni-btn {
+            background: rgba(6, 182, 212, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .alumni-btn:hover {
+            background: rgba(6, 182, 212, 0.3);
+        }
+
+        .action-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-purple), #7c3aed);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-emerald {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+        }
+
+        .btn-amber {
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Resume Editor Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-card {
+            background: #1e293b;
+            border: 1px solid var(--accent-purple);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #c084fc;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .editor-textarea {
+            width: 100%;
+            height: 52vh;
+            background: #0f172a;
+            color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            resize: none;
+            outline: none;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="user-title">
+                <div class="avatar">SP</div>
+                <div class="header-text">
+                    <h1>Sonia Pegu - Enterprise Sales & Strategic Partnerships Monitor</h1>
+                    <p>MBA IIM Indore & CS Engineer | Status: 🎯 Refined LinkedIn Boolean & Company People Filters Active | 📍 Bangalore</p>
+                </div>
+            </div>
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                Boolean Referral & Hiring Manager Finder Active
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Verified Active Openings</div>
+                <div class="stat-value" style="color: #34d399;" id="total-scanned">8</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Alumni Network Filters</div>
+                <div class="stat-value" style="color: #38bdf8;">IIM Indore & Ex-ICICI</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Printable PDF Resumes Ready</div>
+                <div class="stat-value" style="color: #c084fc;" id="resumes-ready">8</div>
+            </div>
+        </div>
+
+        <div class="jobs-section">
+            <div class="section-header">
+                <h2>Top Matched Openings in Bangalore (Boolean Verified Referral Links)</h2>
+                <div style="display: flex; gap: 1rem; align-items: center;">
+                    <span style="color: var(--text-secondary); font-size: 0.85rem;" id="last-updated">Updated Today</span>
+                    <button class="btn btn-secondary" onclick="triggerManualScan()">🔄 Re-Scan Now</button>
+                </div>
+            </div>
+
+            <div id="jobs-container">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Resume Editor Modal -->
+    <div class="modal-overlay" id="editor-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title" id="modal-resume-title">✏️ Edit & Customize Tailored Resume</div>
+                <button class="close-btn" onclick="closeEditorModal()">&times;</button>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.75rem;">
+                Edit any bullet points, numbers, strategic highlights, or executive summary below. When ready, click <strong>"Save & Recompile PDF"</strong> to generate your updated PDF resume!
+            </p>
+            <textarea class="editor-textarea" id="resume-text-editor"></textarea>
+            <div class="modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+                <div id="save-status-box" style="font-size: 0.85rem; color: #34d399; font-weight: 600; display: flex; align-items: center; gap: 0.75rem;"></div>
+                <div style="display: flex; gap: 0.75rem;">
+                    <button class="btn btn-secondary" onclick="closeEditorModal()">Close</button>
+                    <button class="btn btn-amber" onclick="saveAndRecompileResume()">💾 Save Changes & Recompile PDF 📄</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentEditingFilename = "";
+
+        function loadDashboard() {
+            fetch('/api/jobs')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('last-updated').innerText = 'Last Scan: ' + (data.last_updated || 'Just now');
+                    document.getElementById('total-scanned').innerText = data.jobs ? data.jobs.length : 0;
+                    document.getElementById('resumes-ready').innerText = data.jobs ? data.jobs.length : 0;
+
+                    const container = document.getElementById('jobs-container');
+                    container.innerHTML = '';
+
+                    if (!data.jobs || data.jobs.length === 0) {
+                        container.innerHTML = '<p style="color: var(--text-secondary); padding: 1rem;">No job matches found. Click Re-Scan.</p>';
+                        return;
+                    }
+
+                    const cacheBuster = Date.now();
+
+                    data.jobs.forEach(job => {
+                        const card = document.createElement('div');
+                        card.className = 'job-card';
+
+                        const daysAgo = job.days_ago !== undefined ? job.days_ago : 5;
+                        const reqId = job.job_id || 'N/A';
+                        const alumni = job.alumni_network || {};
+
+                        const compPeopleUrl = alumni.company_people_url || `https://www.linkedin.com/company/${encodeURIComponent(job.company.toLowerCase())}/people/?keywords=IIM%20Indore`;
+                        const iimUrl = alumni.iim_indore_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20%22IIM%20Indore%22%20AND%20%22Bengaluru%22`;
+                        const pastCoUrl = alumni.past_company_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20%22ICICI%20Bank%22%20AND%20%22Bengaluru%22`;
+                        const hiringUrl = alumni.hiring_manager_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20(%22Sales%20Director%22%20OR%20%22Recruiter%22)%20AND%20%22Bengaluru%22`;
+                        const msgText = alumni.outreach_template || `Hi, I am an IIM Indore alum leading commercial payments at ICICI Bank and exploring the ${job.title} role at ${job.company}. Would love to connect!`;
+
+                        card.innerHTML = `
+                            <div class="job-header">
+                                <div>
+                                    <div class="company-tag">
+                                        ${job.company} • 📍 ${job.location} 
+                                        <span class="req-chip">Req ID: ${reqId}</span>
+                                        <span class="date-chip">⏱️ Posted ${daysAgo} days ago (${job.posted_date})</span>
+                                    </div>
+                                    <div class="job-title">${job.title}</div>
+                                </div>
+                                <div class="match-badge">Verified Live</div>
+                            </div>
+                            <div class="job-summary-box">
+                                <strong>Role Focus Highlight:</strong> ${job.description}
+                            </div>
+                            
+                            <!-- Refined Alumni & Hiring Manager Referral Finder Section -->
+                            <div class="alumni-box">
+                                <div class="alumni-title">🎯 Targeted Alumni & Hiring Manager Finder for ${job.company}</div>
+                                <div class="alumni-links">
+                                    <a href="${compPeopleUrl}" target="_blank" class="alumni-btn" style="border-color:#38bdf8; background:rgba(56,189,248,0.2);">🏢 ${job.company} LinkedIn "People" Tab (IIM Indore Filter) ↗</a>
+                                    <a href="${iimUrl}" target="_blank" class="alumni-btn">🎓 Exact IIM Indore Alums at ${job.company} (Bengaluru) ↗</a>
+                                    <a href="${pastCoUrl}" target="_blank" class="alumni-btn">💼 Exact Ex-ICICI / AmEx Colleagues ↗</a>
+                                    <a href="${hiringUrl}" target="_blank" class="alumni-btn" style="border-color:#fbbf24; color:#fbbf24; background:rgba(245,158,11,0.15);">🎯 Search Hiring Sales Directors & Recruiters ↗</a>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                    <span style="font-size:0.75rem; color:var(--text-secondary);">Pre-Drafted Outreach Script Ready</span>
+                                    <button class="btn btn-secondary" style="padding:0.3rem 0.6rem; font-size:0.75rem;" onclick="copyOutreachMsg('${encodeURIComponent(msgText)}')">💬 Copy Outreach Message</button>
+                                </div>
+                            </div>
+
+                            <div class="action-btns">
+                                <a href="${job.url}" target="_blank" class="btn btn-primary">⚡ Open Direct Requisition Page ↗</a>
+                                <button class="btn btn-amber" onclick="openResumeEditor('${encodeURIComponent(job.company)}', '${encodeURIComponent(job.title)}')">✏️ Edit & Customize Resume</button>
+                                <a href="/tailored_resumes/${encodeURIComponent(job.company)}_${encodeURIComponent(job.title)}.pdf?t=${cacheBuster}" download class="btn btn-emerald">📥 Download PDF Resume</a>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                });
+        }
+
+        function copyOutreachMsg(msg) {
+            navigator.clipboard.writeText(decodeURIComponent(msg));
+            alert('✅ Warm Alumni Referral Outreach Message copied to your clipboard!');
+        }
+
+        function openResumeEditor(comp, title) {
+            document.getElementById('save-status-box').innerHTML = '';
+            fetch(`/api/get-resume?company=${comp}&title=${title}&t=${Date.now()}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        currentEditingFilename = data.filename;
+                        document.getElementById('modal-resume-title').innerText = `✏️ Edit Resume for ${decodeURIComponent(comp)} (${data.filename})`;
+                        document.getElementById('resume-text-editor').value = data.content;
+                        document.getElementById('editor-modal').style.display = 'flex';
+                    } else {
+                        alert('Could not load resume file for editing.');
+                    }
+                });
+        }
+
+        function closeEditorModal() {
+            document.getElementById('editor-modal').style.display = 'none';
+        }
+
+        function saveAndRecompileResume() {
+            const content = document.getElementById('resume-text-editor').value;
+            const boxEl = document.getElementById('save-status-box');
+
+            boxEl.innerHTML = `<span style="color:#fbbf24;">⏳ Saving changes and recompiling PDF...</span>`;
+
+            fetch('/api/save-resume', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    filename: currentEditingFilename,
+                    content: content
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === "success") {
+                    const downloadUrl = data.pdf_url;
+                    boxEl.innerHTML = `
+                        <span style="color:#34d399;">✅ PDF Recompiled!</span>
+                        <a href="${downloadUrl}" download class="btn btn-emerald" style="padding:0.4rem 0.8rem; font-size:0.8rem;">📥 Download Updated PDF Now</a>
+                    `;
+                    loadDashboard();
+                } else {
+                    boxEl.innerHTML = `<span style="color:#f87171;">❌ Failed to save resume.</span>`;
+                }
+            });
+        }
+
+        function triggerManualScan() {
+            fetch('/api/run-scan', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => {
+                    alert('Manual scan completed!');
+                    loadDashboard();
+                });
+        }
+
+        loadDashboard();
+    </script>
+</body>
+</html>
