@@ -2,6 +2,8 @@
 
 **Autonomous Job Discovery, Dynamic Resume Tailoring & Referral Intelligence Platform**
 
+![JobSearchAutomate UI Dashboard Thumbnail](project_thumbnail.jpg)
+
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-Automation-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![ReportLab](https://img.shields.io/badge/ReportLab-PDF_Engine-FF6F00?style=for-the-badge&logo=reportlab&logoColor=white)](https://www.reportlab.com/)
@@ -65,35 +67,6 @@ graph TD
 - **Browser Automation**: Playwright (Headless Chromium)
 - **Document Processing & Compilation**: ReportLab Platypus Engine, Markdown
 - **Frontend**: HTML5, Vanilla JavaScript, CSS3 (Glassmorphism design tokens)
-
----
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
-- Python 3.10+
-- Node.js & Playwright (for automated web crawling)
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/YourUsername/JobSearchAutomate.git
-cd JobSearchAutomate
-
-# Set up virtual environment
-python3 -m venv venv
-source venv/bin/python3
-
-# Install dependencies
-pip install reportlab playwright
-playwright install chromium
-```
-
-### Running the Web Dashboard
-```bash
-python3 web/app.py
-```
-Open **`http://localhost:8085`** in your browser to view the interactive dashboard!
 
 ---
 
