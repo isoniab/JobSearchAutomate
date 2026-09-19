@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonia Pegu - Enterprise Sales & Strategic Partnerships Job Monitor</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+        <style>
         :root {
-            --bg-dark: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --accent-purple: #8b5cf6;
-            --accent-cyan: #06b6d4;
-            --accent-emerald: #10b981;
-            --accent-amber: #f59e0b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
+            --bg-color: #e2e8e4;
+            --surface-color: #ebf0ec;
+            --text-main: #2d3748;
+            --text-secondary: #718096;
+            --accent-green: #6b8e7b;
+            --shadow-light: #ffffff;
+            --shadow-dark: #c3cec7;
+            --border-color: transparent;
         }
 
         * {
@@ -26,11 +25,8 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 50%);
-            color: var(--text-primary);
+            background-color: var(--bg-color);
+            color: var(--text-main);
             min-height: 100vh;
             padding: 2rem;
         }
@@ -46,7 +42,7 @@
             align-items: center;
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--shadow-dark);
         }
 
         .user-title {
@@ -59,19 +55,20 @@
             width: 52px;
             height: 52px;
             border-radius: 14px;
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            background: var(--surface-color);
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
             font-size: 1.25rem;
-            color: white;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+            color: var(--accent-green);
         }
 
         .header-text h1 {
             font-size: 1.5rem;
             font-weight: 700;
+            color: var(--text-main);
         }
 
         .header-text p {
@@ -83,11 +80,11 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
+            background: var(--surface-color);
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+            color: var(--accent-green);
             padding: 0.5rem 1rem;
             border-radius: 9999px;
-            border: 1px solid rgba(52, 211, 153, 0.3);
             font-size: 0.85rem;
             font-weight: 600;
         }
@@ -95,286 +92,213 @@
         .status-dot {
             width: 8px;
             height: 8px;
-            background-color: #34d399;
+            background-color: var(--accent-green);
             border-radius: 50%;
-            box-shadow: 0 0 10px #34d399;
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .stat-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.25rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-value {
-            font-size: 1.75rem;
-            font-weight: 700;
-        }
-
-        .jobs-section {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
+            background: var(--surface-color);
             border-radius: 20px;
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
             padding: 1.5rem;
         }
 
-        .section-header {
+        .stat-card .label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
+            gap: 0.5rem;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
 
         .job-card {
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.25rem;
-            margin-bottom: 1.25rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            background: var(--surface-color);
+            border-radius: 20px;
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            transition: transform 0.2s;
         }
 
         .job-card:hover {
             transform: translateY(-2px);
-            border-color: rgba(139, 92, 246, 0.4);
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 0.75rem;
         }
 
-        .company-tag {
-            color: var(--accent-cyan);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
+        .company-info {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
         }
 
-        .req-chip {
-            background: rgba(139, 92, 246, 0.2);
-            color: #c084fc;
-            padding: 0.2rem 0.5rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-        }
-
-        .date-chip {
-            background: rgba(56, 189, 248, 0.15);
-            color: #38bdf8;
-            padding: 0.2rem 0.5rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
+        .company-logo {
+            width: 48px;
+            height: 48px;
+            background: var(--surface-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent-green);
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
         }
 
         .job-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #f8fafc;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
         }
 
-        .match-badge {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
-            color: #34d399;
-            padding: 0.4rem 0.8rem;
-            border-radius: 10px;
-            border: 1px solid rgba(52, 211, 153, 0.4);
+        .company-name {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .match-score {
+            background: var(--surface-color);
+            color: var(--accent-green);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
             font-weight: 700;
             font-size: 0.9rem;
+            box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
         }
 
-        .job-summary-box {
-            background: rgba(255, 255, 255, 0.04);
-            border-left: 3px solid var(--accent-purple);
-            padding: 0.75rem 1rem;
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--surface-color);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
             border-radius: 6px;
-            color: #cbd5e1;
-            font-size: 0.875rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            box-shadow: 2px 2px 5px var(--shadow-dark), -2px -2px 5px var(--shadow-light);
         }
 
-        /* Refined Alumni & Hiring Network Card */
-        .alumni-box {
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .alumni-title {
-            color: var(--accent-cyan);
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+        .job-actions {
+            margin-top: auto;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .alumni-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .alumni-btn {
-            background: rgba(6, 182, 212, 0.15);
-            color: #38bdf8;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 0.4rem 0.8rem;
-            border-radius: 8px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .alumni-btn:hover {
-            background: rgba(6, 182, 212, 0.3);
-        }
-
-        .action-btns {
-            display: flex;
-            flex-wrap: wrap;
             gap: 0.75rem;
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1.1rem;
+            flex: 1;
+            padding: 0.75rem;
             border-radius: 10px;
-            font-size: 0.85rem;
             font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
             text-decoration: none;
+            transition: all 0.2s;
             cursor: pointer;
             border: none;
-            transition: transform 0.2s ease, opacity 0.2s ease;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-purple), #7c3aed);
-            color: white;
+            background: var(--surface-color);
+            color: var(--accent-green);
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+        }
+
+        .btn-primary:hover {
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-emerald {
-            background: linear-gradient(135deg, #059669, #10b981);
-            color: white;
-        }
-
-        .btn-amber {
-            background: linear-gradient(135deg, #d97706, #f59e0b);
-            color: white;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
-        }
-
-        /* Resume Editor Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-card {
-            background: #1e293b;
-            border: 1px solid var(--accent-purple);
-            border-radius: 20px;
-            width: 90%;
-            max-width: 900px;
-            max-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            padding: 1.5rem;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.75rem;
-        }
-
-        .modal-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #c084fc;
-        }
-
-        .close-btn {
             background: transparent;
-            border: none;
             color: var(--text-secondary);
-            font-size: 1.5rem;
-            cursor: pointer;
+            border: 2px solid var(--shadow-dark);
         }
 
-        .editor-textarea {
-            width: 100%;
-            height: 52vh;
-            background: #0f172a;
-            color: #f8fafc;
-            border: 1px solid var(--border-color);
+        .alumni-list {
+            margin-top: 1rem;
+            background: var(--surface-color);
             border-radius: 12px;
             padding: 1rem;
-            font-family: 'Courier New', Courier, monospace;
+            box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+        }
+        
+        .alumni-list h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .alumnus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--shadow-dark);
+        }
+
+        .alumnus:last-child {
+            border-bottom: none;
+        }
+
+        .alumnus-name {
             font-size: 0.9rem;
-            line-height: 1.5;
-            resize: none;
-            outline: none;
-            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        
+        .alumnus-role {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .alumnus-link {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
     </style>
 </head>
