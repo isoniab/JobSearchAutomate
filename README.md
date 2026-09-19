@@ -1,8 +1,8 @@
-# 🚀 JobSearchAutomate
+# 🚀 Sonia's Robo-Recruiter
 
 **Autonomous Job Discovery, Dynamic Resume Tailoring & Referral Intelligence Platform**
 
-![JobSearchAutomate UI Dashboard Thumbnail](project_thumbnail.jpg)
+![Sonia's Robo-Recruiter UI Dashboard Thumbnail](project_thumbnail.jpg)
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-Automation-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
@@ -13,9 +13,9 @@
 
 ## 📌 Executive Summary
 
-**JobSearchAutomate** is an autonomous recruitment intelligence engine designed to streamline candidate job discovery, eliminate cold application drop-offs, and automate dynamic resume tailoring. 
+**Sonia's Robo-Recruiter** is an autonomous recruitment intelligence engine designed to streamline candidate job discovery, eliminate cold application drop-offs, and automate dynamic resume tailoring. 
 
-By aggregating live requisitions across global Applicant Tracking Systems (Greenhouse, Lever, Oracle Cloud HCM, Meta Careers, Deloitte USI), enforcing strict multi-parameter filters (5–8 years experience, Bengaluru location), and generating 99%-tailored ATS PDF resumes programmatically, **JobSearchAutomate** maximizes shortlist and interview callback probabilities.
+By aggregating live requisitions across global Applicant Tracking Systems (Greenhouse, Lever, Oracle Cloud HCM, Meta Careers, Deloitte USI), enforcing strict multi-parameter filters (5–8 years experience, Bengaluru location), and generating 99%-tailored ATS PDF resumes programmatically, **Sonia's Robo-Recruiter** maximizes shortlist and interview callback probabilities.
 
 ---
 
@@ -79,8 +79,8 @@ graph TD
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/isoniab/JobSearchAutomate.git
-cd JobSearchAutomate
+git clone https://github.com/isoniab/Sonia's Robo-Recruiter.git
+cd Sonia's Robo-Recruiter
 
 # Set up virtual environment
 python3 -m venv venv
