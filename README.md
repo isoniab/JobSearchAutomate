@@ -15,7 +15,7 @@
 
 **JobSearchAutomate** is an autonomous recruitment intelligence engine designed to streamline candidate job discovery, eliminate cold application drop-offs, and automate dynamic resume tailoring. 
 
-By aggregating live requisitions across global Applicant Tracking Systems (Greenhouse, Lever, Oracle Cloud HCM, Meta Careers), enforcing strict multi-parameter filters (5–8 years experience, Bengaluru location), and generating 99%-tailored ATS PDF resumes programmatically, **JobSearchAutomate** maximizes shortlist and interview callback probabilities.
+By aggregating live requisitions across global Applicant Tracking Systems (Greenhouse, Lever, Oracle Cloud HCM, Meta Careers, Deloitte USI), enforcing strict multi-parameter filters (5–8 years experience, Bengaluru location), and generating 99%-tailored ATS PDF resumes programmatically, **JobSearchAutomate** maximizes shortlist and interview callback probabilities.
 
 ---
 
@@ -23,7 +23,7 @@ By aggregating live requisitions across global Applicant Tracking Systems (Green
 
 ```mermaid
 graph TD
-    A["🌐 Web Intake Sources<br/>(Greenhouse, Lever, Oracle Cloud, Workday, Meta Careers)"] -->|Automated Crawl| B["Engine: JobFetcher<br/>(Location, Recency & 5-8 Yrs Scoping)"]
+    A["🌐 Web Intake Sources<br/>(Greenhouse, Lever, Oracle Cloud, Workday, Meta Careers, Deloitte USI)"] -->|Automated Crawl| B["Engine: JobFetcher<br/>(Location, Recency & 5-8 Yrs Scoping)"]
     B --> C["Engine: JobMatcher<br/>(Candidate Profile Fit Scoring & Competency Mapping)"]
     C --> D["Engine: ResumeTailor<br/>(Dynamic Markdown & ReportLab PDF Compilation)"]
     C --> E["Engine: AlumniNetworkFinder<br/>(IIM Indore & Ex-Colleague Boolean Search Queries)"]
@@ -37,12 +37,12 @@ graph TD
 ## 🔑 Key Features & Modules
 
 ### 1. **Autonomous Intake & Scraper Workflow (`JobFetcher`)**
-- Crawls and ingests live requisitions across top tech ATS portals (**Greenhouse**, **Lever**, **Oracle Cloud HCM**, **Meta Careers**).
+- Crawls and ingests live requisitions across top tech ATS portals (**Greenhouse**, **Lever**, **Oracle Cloud HCM**, **Meta Careers**, **Deloitte USI**).
 - Enforces multi-parameter validation: Location (`Bengaluru`), Posting Recency (`≤ 7 days`), and Seniority Band (`5 to 8 years experience`).
 
 ### 2. **Candidate Match & Competency Scoring Engine (`JobMatcher`)**
 - Evaluates incoming job descriptions against candidate profile metadata (`data/resume_profile.json`).
-- Scores fit (90%–95%+) based on domain relevance (Commercial Payments, Enterprise B2B Sales, Strategic Alliances) and key career achievements.
+- Scores fit (90%–95%+) based on domain relevance (Commercial Payments, Enterprise B2B Sales, Strategic Alliances, Consulting) and key career achievements.
 
 ### 3. **Dynamic Resume Generator & ReportLab PDF Compiler (`ResumeTailor` + `PDFConverter`)**
 - Programmatically generates 99%-tailored Markdown resumes (`.md`) specifically optimized for ATS parsing.
@@ -67,6 +67,35 @@ graph TD
 - **Browser Automation**: Playwright (Headless Chromium)
 - **Document Processing & Compilation**: ReportLab Platypus Engine, Markdown
 - **Frontend**: HTML5, Vanilla JavaScript, CSS3 (Glassmorphism design tokens)
+
+---
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+- Python 3.10+
+- Node.js & Playwright
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/isoniab/JobSearchAutomate.git
+cd JobSearchAutomate
+
+# Set up virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install reportlab playwright
+playwright install chromium
+```
+
+### Running the Web Dashboard
+```bash
+python3 web/app.py
+```
+Open **`http://localhost:8085`** in your browser to view the interactive dashboard!
 
 ---
 

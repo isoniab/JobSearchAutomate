@@ -29,7 +29,12 @@ def run_job_search_automation():
             
             # Generate 95-99% tailored resume file for this specific JD
             resume_path = tailor.generate_tailored_resume(job)
+            pdf_filename = os.path.basename(resume_path)
+            md_filename = pdf_filename.replace(".pdf", ".md")
+            
             job["tailored_resume_path"] = resume_path
+            job["pdf_filename"] = pdf_filename
+            job["md_filename"] = md_filename
             
             matched_jobs.append(job)
 

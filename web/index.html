@@ -470,11 +470,14 @@
                         const card = document.createElement('div');
                         card.className = 'job-card';
 
-                        const daysAgo = job.days_ago !== undefined ? job.days_ago : 5;
+                        const daysAgo = job.days_ago !== undefined ? job.days_ago : 0;
                         const reqId = job.job_id || 'N/A';
                         const alumni = job.alumni_network || {};
 
-                        const compPeopleUrl = alumni.company_people_url || `https://www.linkedin.com/company/${encodeURIComponent(job.company.toLowerCase())}/people/?keywords=IIM%20Indore`;
+                        const pdfFile = job.pdf_filename || `${job.company}_${job.title}.pdf`;
+                        const mdFile = job.md_filename || `${job.company}_${job.title}.md`;
+
+                        const compPeopleUrl = alumni.company_people_url || `https://www.linkedin.com/company/${encodeURIComponent(job.company.toLowerCase().replace(/[^a-z0-9]/g, ''))}/people/?keywords=IIM%20Indore`;
                         const iimUrl = alumni.iim_indore_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20%22IIM%20Indore%22%20AND%20%22Bengaluru%22`;
                         const pastCoUrl = alumni.past_company_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20%22ICICI%20Bank%22%20AND%20%22Bengaluru%22`;
                         const hiringUrl = alumni.hiring_manager_search || `https://www.linkedin.com/search/results/people/?keywords=%22${encodeURIComponent(job.company)}%22%20AND%20(%22Sales%20Director%22%20OR%20%22Recruiter%22)%20AND%20%22Bengaluru%22`;
@@ -513,8 +516,8 @@
 
                             <div class="action-btns">
                                 <a href="${job.url}" target="_blank" class="btn btn-primary">⚡ Open Direct Requisition Page ↗</a>
-                                <button class="btn btn-amber" onclick="openResumeEditor('${encodeURIComponent(job.company)}', '${encodeURIComponent(job.title)}')">✏️ Edit & Customize Resume</button>
-                                <a href="/tailored_resumes/${encodeURIComponent(job.company)}_${encodeURIComponent(job.title)}.pdf?t=${cacheBuster}" download class="btn btn-emerald">📥 Download PDF Resume</a>
+                                <button class="btn btn-amber" onclick="openResumeEditor('${encodeURIComponent(mdFile)}', '${encodeURIComponent(job.company)}', '${encodeURIComponent(job.title)}')">✏️ Edit & Customize Resume</button>
+                                <a href="/tailored_resumes/${encodeURIComponent(pdfFile)}?t=${cacheBuster}" download class="btn btn-emerald">📥 Download PDF Resume</a>
                             </div>
                         `;
                         container.appendChild(card);
@@ -527,14 +530,14 @@
             alert('✅ Warm Alumni Referral Outreach Message copied to your clipboard!');
         }
 
-        function openResumeEditor(comp, title) {
+        function openResumeEditor(mdFile, comp, title) {
             document.getElementById('save-status-box').innerHTML = '';
-            fetch(`/api/get-resume?company=${comp}&title=${title}&t=${Date.now()}`)
+            fetch(`/api/get-resume?filename=${mdFile}&company=${comp}&title=${title}&t=${Date.now()}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data.status === "success") {
                         currentEditingFilename = data.filename;
-                        document.getElementById('modal-resume-title').innerText = `✏️ Edit Resume for ${decodeURIComponent(comp)} (${data.filename})`;
+                        document.getElementById('modal-resume-title').innerText = `✏️ Edit Resume (${data.filename})`;
                         document.getElementById('resume-text-editor').value = data.content;
                         document.getElementById('editor-modal').style.display = 'flex';
                     } else {

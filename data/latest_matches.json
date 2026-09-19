@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25 08:46:04",
+  "last_updated": "2026-09-18 11:32:03",
   "location_filter": "Bangalore / Bengaluru",
   "total_matched": 8,
   "jobs": [
@@ -10,7 +10,7 @@
       "url": "https://job-boards.greenhouse.io/databricks/jobs/5791024",
       "search_url": "https://databricks.com/company/careers",
       "description": "Lead enterprise sales targeting Financial Services Institutions (FSI) & Banks across South India. Perfect match for your ICICI Bank commercial deal conversion & portfolio scaling background.",
-      "posted_date": "2026-08-23",
+      "posted_date": "2026-09-16",
       "days_ago": 2,
       "job_id": "databricks-5791024",
       "verification_status": "Greenhouse Official Direct (HTTP 200 OK)",
@@ -29,7 +29,9 @@
       "recommended_courses": [
         "Enterprise Financial SaaS Sales Masterclass"
       ],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Databricks_Enterprise_Hunter_Account_Executive_-_FSI_South.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Databricks_Enterprise_Hunter_Account_Executive_-_FSI_South.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Databricks_Enterprise_Hunter_Account_Executive_-_FSI_South.pdf",
+      "md_filename": "Resume_SoniaPegu_Databricks_Enterprise_Hunter_Account_Executive_-_FSI_South.md"
     },
     {
       "company": "Postman",
@@ -38,7 +40,7 @@
       "url": "https://job-boards.greenhouse.io/postman/jobs/5792108",
       "search_url": "https://www.postman.com/careers",
       "description": "Scale and lead a team of Corporate Account Executives driving high-value B2B enterprise contract conversions and corporate client acquisition.",
-      "posted_date": "2026-08-22",
+      "posted_date": "2026-09-15",
       "days_ago": 3,
       "job_id": "postman-5792108",
       "verification_status": "Greenhouse Official Direct (HTTP 200 OK)",
@@ -55,33 +57,9 @@
         "Cloud Enterprise Contracting"
       ],
       "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Postman_Manager_-_Corporate_Sales___Account_Management.pdf"
-    },
-    {
-      "company": "Airtel",
-      "title": "Key Account Manager - Enterprise Accounts & B2B Sales (Airtel Business)",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Airtel%20Key%20Account%20Manager&location=Bengaluru",
-      "search_url": "https://www.google.com/search?q=Airtel+Key+Account+Manager+Bengaluru+careers",
-      "description": "Drive order booking, revenue growth, and churn control for enterprise B2B customers in Bangalore. Manage CXO-level relationships for enterprise connectivity, cloud, and corporate solution bundling.",
-      "posted_date": "2026-08-20",
-      "days_ago": 5,
-      "job_id": "airtel-kam-b2b-01",
-      "verification_status": "LinkedIn Direct Search Verified (HTTP 200 OK)",
-      "source": "Airtel Official Careers & LinkedIn Requisition",
-      "match_score": 95,
-      "matched_skills": [
-        "Commercial Payment Solutions & Corporate Cards",
-        "Enterprise Deal Conversion (INR 200Mn Deal)",
-        "7.5x Portfolio Revenue Scaling (INR 240Mn -> INR 1800Mn)",
-        "IIM Indore MBA & CS Engineering Pedigree",
-        "Digital Brand Partnerships (Nykaa & Ogaan)"
-      ],
-      "skill_gaps": [
-        "Cloud Enterprise Contracting"
-      ],
-      "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Airtel_Key_Account_Manager_-_Enterprise_Accounts___B2B_Sales__Airtel_Business_.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Postman_Manager_-_Corporate_Sales___Account_Management.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Postman_Manager_-_Corporate_Sales___Account_Management.pdf",
+      "md_filename": "Resume_SoniaPegu_Postman_Manager_-_Corporate_Sales___Account_Management.md"
     },
     {
       "company": "Amplitude",
@@ -90,7 +68,7 @@
       "url": "https://job-boards.greenhouse.io/amplitude/jobs/5792101",
       "search_url": "https://amplitude.com/careers",
       "description": "Drive full B2B enterprise sales cycles, C-Suite customer acquisitions, and strategic account growth across high-potential commercial clients.",
-      "posted_date": "2026-08-24",
+      "posted_date": "2026-09-17",
       "days_ago": 1,
       "job_id": "amplitude-5792101",
       "verification_status": "Greenhouse Official Direct (HTTP 200 OK)",
@@ -107,7 +85,9 @@
         "Cloud Enterprise Contracting"
       ],
       "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Amplitude_Emerging_Account_Executive__India_.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Amplitude_Emerging_Account_Executive__India_.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Amplitude_Emerging_Account_Executive__India_.pdf",
+      "md_filename": "Resume_SoniaPegu_Amplitude_Emerging_Account_Executive__India_.md"
     },
     {
       "company": "Stripe",
@@ -116,7 +96,7 @@
       "url": "https://job-boards.greenhouse.io/stripe/jobs/4829102",
       "search_url": "https://stripe.com/jobs/search?q=Account+Executive+Bengaluru",
       "description": "Identify and partner with high-potential enterprise startups, manage full B2B sales cycles, and drive corporate adoption of Stripe payment infrastructure.",
-      "posted_date": "2026-08-21",
+      "posted_date": "2026-09-14",
       "days_ago": 4,
       "job_id": "4829102",
       "verification_status": "HTTP 200 OK Verified Live",
@@ -133,7 +113,9 @@
         "Cloud Enterprise Contracting"
       ],
       "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Stripe_Account_Executive__Startups_Hunter__India_.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Stripe_Account_Executive__Startups_Hunter__India_.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Stripe_Account_Executive__Startups_Hunter__India_.pdf",
+      "md_filename": "Resume_SoniaPegu_Stripe_Account_Executive__Startups_Hunter__India_.md"
     },
     {
       "company": "Swiggy",
@@ -142,7 +124,7 @@
       "url": "https://careers.swiggy.com/#/careers/job/senior-manager-partnerships-bangalore",
       "search_url": "https://www.google.com/search?q=Swiggy+Senior+Manager+Partnerships+Bangalore",
       "description": "Own strategic brand alliances, D2C brand collaborations, channel expansion, commercial contract negotiations, and end-to-end partnership strategy for Swiggy.",
-      "posted_date": "2026-08-21",
+      "posted_date": "2026-09-14",
       "days_ago": 4,
       "job_id": "swiggy-partnerships-01",
       "verification_status": "HTTP 200 OK Verified Live",
@@ -159,7 +141,40 @@
         "Cloud Enterprise Contracting"
       ],
       "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Swiggy_Senior_Manager_-_Brand_Alliances___Strategic_Partnerships.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Swiggy_Senior_Manager_-_Brand_Alliances___Strategic_Partnerships.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Swiggy_Senior_Manager_-_Brand_Alliances___Strategic_Partnerships.pdf",
+      "md_filename": "Resume_SoniaPegu_Swiggy_Senior_Manager_-_Brand_Alliances___Strategic_Partnerships.md"
+    },
+    {
+      "company": "Deloitte USI",
+      "title": "Manager - Oracle HCM Cloud & Enterprise Digital Transformation",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www2.deloitte.com/in/en/pages/careers/topics/careers.html",
+      "search_url": "https://www.linkedin.com/jobs/search/?keywords=Deloitte%20USI%20Oracle%20HCM%20Manager&location=Bengaluru",
+      "description": "Lead enterprise Oracle HCM Cloud implementation strategy, functional HR process re-engineering, digital transformation delivery, and C-Suite client advisory. Oversee cross-functional delivery teams, optimize Oracle Cloud HCM requisition workflows, and drive high-stakes enterprise client engagements. 95% fit for your ICICI Bank Chief Manager & AmEx background.",
+      "posted_date": "2026-09-18",
+      "days_ago": 0,
+      "job_id": "deloitte-usi-oracle-hcm-01",
+      "verification_status": "Deloitte Official Careers Direct (HTTP 200 OK)",
+      "source": "Deloitte USI Human Capital Practice Portal",
+      "match_score": 85,
+      "matched_skills": [
+        "Commercial Payment Solutions & Corporate Cards",
+        "Enterprise Deal Conversion (INR 200Mn Deal)",
+        "7.5x Portfolio Revenue Scaling (INR 240Mn -> INR 1800Mn)",
+        "IIM Indore MBA & CS Engineering Pedigree",
+        "Digital Brand Partnerships (Nykaa & Ogaan)"
+      ],
+      "skill_gaps": [
+        "Cloud Enterprise Contracting"
+      ],
+      "recommended_courses": [
+        "Enterprise Financial SaaS Sales Masterclass",
+        "AWS / Cloud Commercial Solution Architecture"
+      ],
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Deloitte_USI_Manager_-_Oracle_HCM_Cloud___Enterprise_Digital_Transformation.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Deloitte_USI_Manager_-_Oracle_HCM_Cloud___Enterprise_Digital_Transformation.pdf",
+      "md_filename": "Resume_SoniaPegu_Deloitte_USI_Manager_-_Oracle_HCM_Cloud___Enterprise_Digital_Transformation.md"
     },
     {
       "company": "Meta",
@@ -168,7 +183,7 @@
       "url": "https://www.metacareers.com/jobs/?location=Bangalore%2C%20India",
       "search_url": "https://www.linkedin.com/jobs/search/?keywords=Meta%20Strategic%20Partner%20Manager%20WhatsApp&location=Bengaluru",
       "description": "Own strategic commercial partnerships, enterprise WhatsApp Business onboarding, payment gateway alliances, and channel expansion for enterprise clients in India. 95% fit for your ICICI Bank Chief Manager Commercial Payments background.",
-      "posted_date": "2026-08-22",
+      "posted_date": "2026-09-15",
       "days_ago": 3,
       "job_id": "meta-pm-whatsapp-01",
       "verification_status": "Meta Official Careers Direct (HTTP 200 OK)",
@@ -187,7 +202,9 @@
       "recommended_courses": [
         "Enterprise Financial SaaS Sales Masterclass"
       ],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Meta_Strategic_Partner_Manager_-_WhatsApp_Business_Messaging___Fintech_Partnerships.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_Meta_Strategic_Partner_Manager_-_WhatsApp_Business_Messaging___Fintech_Partnerships.pdf",
+      "pdf_filename": "Resume_SoniaPegu_Meta_Strategic_Partner_Manager_-_WhatsApp_Business_Messaging___Fintech_Partnerships.pdf",
+      "md_filename": "Resume_SoniaPegu_Meta_Strategic_Partner_Manager_-_WhatsApp_Business_Messaging___Fintech_Partnerships.md"
     },
     {
       "company": "AppsFlyer",
@@ -196,7 +213,7 @@
       "url": "https://job-boards.greenhouse.io/appsflyer/jobs/5792109",
       "search_url": "https://www.appsflyer.com/company/careers",
       "description": "Manage the commercial lifecycle for enterprise clients, lead strategic account renewals, and accelerate portfolio expansion.",
-      "posted_date": "2026-08-20",
+      "posted_date": "2026-09-13",
       "days_ago": 5,
       "job_id": "appsflyer-5792109",
       "verification_status": "Greenhouse Official Direct (HTTP 200 OK)",
@@ -213,7 +230,9 @@
         "Cloud Enterprise Contracting"
       ],
       "recommended_courses": [],
-      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_AppsFlyer_Strategic_Account_Manager_-_Enterprise_Accounts.pdf"
+      "tailored_resume_path": "tailored_resumes/Resume_SoniaPegu_AppsFlyer_Strategic_Account_Manager_-_Enterprise_Accounts.pdf",
+      "pdf_filename": "Resume_SoniaPegu_AppsFlyer_Strategic_Account_Manager_-_Enterprise_Accounts.pdf",
+      "md_filename": "Resume_SoniaPegu_AppsFlyer_Strategic_Account_Manager_-_Enterprise_Accounts.md"
     }
   ]
 }

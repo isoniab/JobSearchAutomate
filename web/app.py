@@ -5,6 +5,7 @@ import os
 import urllib.parse
 import sys
 import time
+import re
 
 DIRECTORY = "/Users/tarun/Desktop/JobSearchAutomate"
 sys.path.append(DIRECTORY)
@@ -55,6 +56,7 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
 
         elif parsed_url.path == "/api/get-resume":
             query_params = urllib.parse.parse_qs(parsed_url.query)
+            filename = query_params.get("filename", [""])[0]
             comp = query_params.get("company", [""])[0]
             title = query_params.get("title", [""])[0]
 
@@ -62,10 +64,14 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
             md_files = [f for f in os.listdir(res_dir) if f.endswith(".md")]
 
             target_md = None
-            for f in md_files:
-                if comp.lower() in f.lower() or title.lower() in f.lower():
-                    target_md = f
-                    break
+            if filename and os.path.exists(os.path.join(res_dir, filename)):
+                target_md = filename
+            else:
+                comp_word = comp.split()[0].lower() if comp else ""
+                for f in md_files:
+                    if comp_word and comp_word in f.lower():
+                        target_md = f
+                        break
 
             if target_md:
                 full_md_path = os.path.join(res_dir, target_md)
@@ -98,8 +104,9 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
             else:
                 pdf_files = [f for f in os.listdir(res_dir) if f.endswith(".pdf")]
                 target_file = None
+                terms = [t.lower() for t in re.split(r'[^a-zA-Z0-9]', rel_path) if len(t) > 3]
                 for f in pdf_files:
-                    if rel_path.lower() in f.lower() or f.lower() in rel_path.lower():
+                    if any(term in f.lower() for term in terms if term not in ["resume", "soniapegu"]):
                         target_file = f
                         break
                 full_path = os.path.join(res_dir, target_file) if target_file else None
